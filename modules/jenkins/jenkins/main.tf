@@ -62,7 +62,7 @@ locals {
           failure_threshold     = 30
 
           http_get = {
-            path = "/login"
+            path = "/master/login"
             port = 8080
           }
         }
@@ -73,7 +73,7 @@ locals {
           failure_threshold     = 3
 
           http_get = {
-            path = "/login"
+            path = "/master/login"
             port = 8080
           }
         }
@@ -84,7 +84,7 @@ locals {
           failure_threshold     = 3
 
           http_get = {
-            path = "/login"
+            path = "/master/login"
             port = 8080
           }
         }
