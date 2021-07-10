@@ -16,7 +16,7 @@ variable "ports" {
 }
 
 variable "image" {
-  default = "registry.rebelsoft.com/jenkins:latest"
+  default = "jenkins/jenkins:lts-jdk11"
 }
 
 variable "env" {
