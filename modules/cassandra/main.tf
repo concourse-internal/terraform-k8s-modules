@@ -100,6 +100,10 @@ locals {
           {
             name       = var.volume_claim_template_name
             mount_path = "/var/lib/cassandra"
+          },
+          {
+            name       = "config"
+            mount_path = "/etc/security/limits.conf"
           }
         ]
       },
@@ -125,6 +129,16 @@ locals {
       },
     ]
 
+
+    volumes = [
+      {
+        name = "config"
+        config_map = {
+          name = var.cassandra_limits_config_map_name
+        }
+      },
+    ]
+
     volume_claim_templates = [
       {
         name               = var.volume_claim_template_name
@@ -140,6 +154,7 @@ locals {
     ]
   }
 }
+
 
 module "statefulset-service" {
   source     = "../../archetypes/statefulset-service"

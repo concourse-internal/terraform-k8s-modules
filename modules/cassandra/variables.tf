@@ -79,3 +79,7 @@ variable "CASSANDRA_RACK" {
 variable "CASSANDRA_ENDPOINT_SNITCH" {
   default = "GossipingPropertyFileSnitch"
 }
+
+variable "cassandra_limits_config_map_name" {
+  default = null
+}
