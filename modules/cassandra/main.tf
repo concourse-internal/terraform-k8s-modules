@@ -104,7 +104,7 @@ locals {
           {
             name       = "config"
             mount_path = "/etc/security/limits.conf"
-            sub_path   = limits.conf
+            sub_path   = "limits.conf"
           }
         ]
       },
@@ -156,13 +156,6 @@ locals {
   }
 }
 
-
-module "config" {
-  source    = "../kubernetes/config-map"
-  name      = "config"
-  namespace = var.namespace
-  from-file = "${path.module}/limits.conf"
-}
 
 module "statefulset-service" {
   source     = "../../archetypes/statefulset-service"
