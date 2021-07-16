@@ -104,6 +104,7 @@ locals {
           {
             name       = "config"
             mount_path = "/etc/security/limits.conf"
+            subpath = limits.conf
           }
         ]
       },
