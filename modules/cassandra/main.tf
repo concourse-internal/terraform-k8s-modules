@@ -158,7 +158,7 @@ locals {
 
 
 module "config" {
-  source    = "../../kubernetes/config-map"
+  source    = "../kubernetes/config-map"
   name      = "config"
   namespace = var.namespace
   from-file = "${path.module}/limits.conf"
