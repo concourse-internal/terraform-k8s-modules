@@ -157,6 +157,13 @@ locals {
 }
 
 
+module "config" {
+  source    = "../kubernetes/config-map"
+  name      = "config"
+  namespace = var.namespace
+  from-file = "${path.module}/limits.conf"
+}
+
 module "statefulset-service" {
   source     = "../../archetypes/statefulset-service"
   parameters = merge(local.parameters, var.overrides)
