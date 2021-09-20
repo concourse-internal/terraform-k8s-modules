@@ -51,6 +51,10 @@ locals {
             -Dhudson.model.DirectoryBrowserSupport.CSP="default-src 'self' 'unsafe-inline'; img-src 'self' 'unsafe-inline' data:; style-src 'self' 'unsafe-inline'; child-src 'self' 'unsafe-inline'; frame-src 'self' 'unsafe-inline'; font-src 'self' data:;"
             -Djenkins.install.runSetupWizard=false
             EOF
+          },
+          {
+            name = "CASC_JENKINS_CONFIG"
+            value = "/var/jenkins_home/casc_configs"
           }
         ], var.env)
 
