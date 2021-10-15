@@ -15,8 +15,12 @@ variable "ports" {
   ]
 }
 
+variable "image_pull_secrets" {
+   default = []
+}
+
 variable "image" {
-  default = "jenkins/jenkins:lts-jdk11"
+  default = "registry.mgmt-dev.concourselabs.info/jenkins:latest"
 }
 
 variable "env" {
