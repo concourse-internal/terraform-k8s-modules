@@ -6,6 +6,7 @@ locals {
     replicas             = 1
     ports                = var.ports
     enable_service_links = false
+    image_pull_secrets   = var.image_pull_secrets
 
     containers = [
       {
