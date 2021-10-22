@@ -3,7 +3,7 @@ variable "name" {}
 variable "namespace" {}
 
 variable "image" {
-  default = "nginx:1.17.8"
+  default = "nginx:1.21.3"
 }
 
 variable "replicas" {
