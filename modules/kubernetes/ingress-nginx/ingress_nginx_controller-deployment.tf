@@ -62,7 +62,7 @@ resource "k8s_apps_v1_deployment" "nginx_ingress_controller" {
               }
             }
           }
-          image = "quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.30.0"
+          image = "k8s.gcr.io/ingress-nginx/controller:v0.49.3"
           lifecycle {
             pre_stop {
               exec {
