@@ -1,5 +1,5 @@
 /**
-// Example: Create a Cassandra cluster
+// Example: Create a Cassandra cluster.
 
 variable "name" {
   default = "cassandra"
