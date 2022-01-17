@@ -46,7 +46,7 @@ module "cassandra" {
   namespace = var.namespace
 
   replicas      = module.storage-ebs.replicas
-  storage       = "1Gi"
+  storage       = module.storage-ebs.storage
   storage_class = module.storage-ebs.storage_class_name
 }
  */

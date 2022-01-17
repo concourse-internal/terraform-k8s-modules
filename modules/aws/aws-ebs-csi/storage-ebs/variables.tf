@@ -2,7 +2,7 @@ variable "name" {}
 
 variable "namespace" {}
 
-//variable "storage" {}
+variable "storage" {}
 
 variable "annotations" {
   default = {}
