@@ -16,7 +16,7 @@ variable "ports" {
 }
 
 variable "image" {
-  default = "grafana/grafana:8.3.0"
+  default = "grafana/grafana:8.4.1"
 }
 
 variable "env" {
