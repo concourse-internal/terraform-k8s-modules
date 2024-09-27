@@ -16,7 +16,7 @@ variable "ports" {
 }
 
 variable "image" {
-  default = "prom/prometheus:v2.16.0"
+  default = "prom/prometheus:v2.28.0"
 }
 
 variable "env" {
